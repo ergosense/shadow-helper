@@ -1,0 +1,18 @@
+author: ergosense
+type: lib
+description: Device shadow helper
+version: 1.0
+
+sources:
+  - src
+includes:
+  - include
+
+config_schema: ~
+
+libs: ~
+
+tags:
+  - ergosense
+
+manifest_version: 2017-09-29
