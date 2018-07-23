@@ -10,12 +10,12 @@ static void _shadow_cb(int ev, void *evd, void *arg)
   {
     case MGOS_SHADOW_CONNECTED:
       LOG(LL_INFO, ("Device shadow connected"));
-      ergo_device_state_write(NULL);
+      mgos_shadow_helper_write(NULL);
       break;
     case MGOS_SHADOW_GET_ACCEPTED:
     case MGOS_SHADOW_UPDATE_DELTA:
       LOG(LL_INFO, ("Device state received %s (%d)", ((struct mg_str*) evd)->p, ((struct mg_str*) evd)->len));
-      ergo_device_state_sync(((struct mg_str*) evd)->p);
+      mgos_shadow_helper_sync(((struct mg_str*) evd)->p);
       break;
   }
 }
